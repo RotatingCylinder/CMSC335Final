@@ -44,7 +44,7 @@ mongoose.connect(uri)
    .then(() => console.log("Connected to MongoDB"))
    .catch(err => console.error(err));
 
-app.set("views", path.resolve(__dirname, "templates"));
+app.set("views", path.resolve(__dirname, "Templates"));
 app.use(express.static("media"));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:false}));
