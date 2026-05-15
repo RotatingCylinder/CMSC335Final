@@ -63,7 +63,7 @@ router2.post("/signup", async (request, response) => {
 
       // function responsible for API call to Mailbox
       async function validateEmail(emailToCheck) {
-         const url = `http://apilayer.net/api/check?access_key=${MAILBOX_CONNECTION_STRING}&email=${emailToCheck}`;
+         const url = `http://apilayer.net/api/check?access_key=${process.env.MAILBOX_CONNECTION_STRING}&email=${emailToCheck}`;
 
          try {
             const apiResponse = await fetch(url);
