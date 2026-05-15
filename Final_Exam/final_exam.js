@@ -45,7 +45,7 @@ mongoose.connect(uri)
    .catch(err => console.error(err));
 
 app.set("views", path.resolve(__dirname, "Templates"));
-app.use(express.static("media"));
+app.use(express.static(path.join(__dirname, "media")));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:false}));
 
