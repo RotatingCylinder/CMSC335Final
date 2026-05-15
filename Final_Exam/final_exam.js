@@ -8,12 +8,9 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const portNumber = 7000;
 const bodyParser = require("body-parser");
 const { MongoClient, ServerApiVersion} = require("mongodb");
 const mongoose = require("mongoose");
-
-console.log(`Web server started and running at http://localhost:${portNumber}`);
 
 const applicationSchema = new mongoose.Schema({
    name: String,
@@ -54,7 +51,7 @@ router1.get("/", async (request, response) => {
 });
 
 router2.get("/signup", async (request, response) => {
-   response.render("signup",{portNum:portNumber});
+   response.render("signup");
 });
 
 router2.post("/signup", async (request, response) => {
@@ -140,7 +137,6 @@ router4.get("/clear", async (request, response) => {
    }
 );
 
-app.listen(portNumber);
 app.use(router1);
 app.use(router2);
 app.use(router3);
