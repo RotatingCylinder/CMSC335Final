@@ -1,0 +1,34 @@
+h1,h2 {
+    text-align: center;
+
+    /* MANDATORY */
+    font-size:xx-large; 
+}
+
+div {
+    text-align: center;
+}
+
+img {
+    width:700px;height:400px;
+}
+
+.creepster-regular {
+    /* MANDATORY google font */
+  font-family: "Creepster", system-ui;
+  font-weight: 400;
+  font-style: normal; 
+  font-size: x-large;
+
+  /* MANDATORY */
+  color:red;
+}
+
+.sign-up {
+    font-size: x-large;
+    border: solid; 
+    padding: 1rem;
+
+    /* MANDATORY */
+    background-color: gray;
+}

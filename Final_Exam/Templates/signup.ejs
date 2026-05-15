@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+</head>
+<body>
+    <script>
+        window.onsubmit = () => 
+        {
+            return window.confirm("If your email fails verification, we can't count your signing. Are you sure you want to submit?") 
+        }
+    </script>
+
+    <h1>Thank you for signing up for the petition. With your support, we can defeat football fascism!</h1>
+    <form action="http://localhost:<%- portNum %>/signup" method="post">
+        <fieldset>
+            <legend>Personal Info</legend>
+            Name/Username: <input type="text" name="name"> Email (this will be VALIDATED, no bots!): <input type="email" name="email">
+            Phone Number: <input type="tel" name="number">
+        </fieldset>
+        <fieldset>
+            <legend>Saving Football</legend>
+            <strong>Why do YOU want to save football?</strong> <br>
+            <input type="radio" id="choice" name="choice" value="Haram Ball must never be witnessed again!"> Haram Ball must never be witnessed again! <br>
+            <input type="radio" id="choice" name="choice" value="A player/manager I'm a fan of was disappeared by a football dictator"> A player/manager I'm a fan of was disappeared by a football dictator <br>
+            <input type="radio" id="choice" name="choice" value="I'm a freedom fighter, all fascist (football) regimes must be toppled"> I'm a freedom fighter, all fascist (football) regimes must be toppled <br>
+            <input type="radio" id="choice" name="choice" value="I hate Arsenal"> I hate Arsenal <br>
+            <input type="radio" id="choice" name="choice" value="Other"> Other  <br>
+            <br><br>
+            <strong>What message do you want to send by signing the petition?</strong> <br>
+            <textarea rows="5" cols="50" id="message" name="message"></textarea>
+        </fieldset>
+        <br>
+        <input type="reset" />
+		<input type="submit" value="Sign the petition!"/>
+        <br><a href="/">Main Page</a>
+    </form>
+</body>
+</html>
