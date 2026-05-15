@@ -11,6 +11,8 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const { MongoClient, ServerApiVersion} = require("mongodb");
 const mongoose = require("mongoose");
+const portNumber = 7000;
+
 
 const applicationSchema = new mongoose.Schema({
    name: String,
@@ -137,6 +139,7 @@ router4.get("/clear", async (request, response) => {
    }
 );
 
+app.listen(portNumber);
 app.use(router1);
 app.use(router2);
 app.use(router3);
